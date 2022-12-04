@@ -8,6 +8,7 @@
  */
 import { listen } from "@colyseus/arena";
 import { animate } from "./ai";
+import { Timer } from "./ai/Timer";
 
 // Import arena config
 import arenaConfig from "./arena.config";
@@ -15,4 +16,4 @@ import arenaConfig from "./arena.config";
 // Create and listen on 2567 (or PORT environment variable.)
 listen(arenaConfig);
 
-animate();
+Timer(animate, 10);

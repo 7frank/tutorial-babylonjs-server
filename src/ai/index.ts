@@ -51,12 +51,13 @@ function requestAnimationFrame(f) {
   setImmediate(() => f(Date.now()));
 }
 
-export function animate() {
-  requestAnimationFrame(animate);
+export function animate(delta0: number) {
+  //requestAnimationFrame(animate);
 
   const delta = time.update().getDelta();
 
   entityManager.update(delta);
 
-  console.log(girl.toJSON());
+  //console.log(girl.toJSON());
+  console.log(girl.position);
 }
