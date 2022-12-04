@@ -17,13 +17,13 @@ export function Timer(update: (delta: number) => void, fps: number) {
 
       update(delta);
 
-      console.log(
-        "delta",
-        delta,
-        "(target: " + tickLengthMs + " ms)",
-        "node ticks",
-        actualTicks
-      );
+      //   console.log(
+      //     "delta",
+      //     delta,
+      //     "(target: " + tickLengthMs + " ms)",
+      //     "node ticks",
+      //     actualTicks
+      //   );
       actualTicks = 0;
     }
 

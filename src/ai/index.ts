@@ -30,7 +30,7 @@ function createAnimationAction(mixer: AnimationMixer, clip) {
   return action;
 }
 
-const girl = new Girl(mixer, animations);
+export const girl = new Girl(mixer, animations);
 
 entityManager.add(girl);
 
@@ -47,17 +47,11 @@ collectible.spawn();
 
 entityManager.add(collectible);
 
-function requestAnimationFrame(f) {
-  setImmediate(() => f(Date.now()));
-}
-
 export function animate(delta0: number) {
-  //requestAnimationFrame(animate);
-
   const delta = time.update().getDelta();
 
   entityManager.update(delta);
 
   //console.log(girl.toJSON());
-  console.log(girl.position);
+  // console.log(girl.position);
 }
