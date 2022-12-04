@@ -34,12 +34,12 @@ export class MyRoom extends Room<MyRoomState> {
 
     // place player in the map of players by its sessionId
     // (client.sessionId is unique per connection!)
-    this.state.players.set("111111", player);
+    this.state.npcs.set("111111", player);
 
     console.log("new npc =>", player.toJSON());
 
     Timer((d) => {
-      const p = this.state.players.get("111111");
+      const p = this.state.npcs.get("111111");
 
       p.assign(girl.position);
 
