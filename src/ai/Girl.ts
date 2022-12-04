@@ -18,10 +18,10 @@ class Girl extends Vehicle {
     const idle = this.animations.get("IDLE");
     idle.enabled = true;
 
-    this.ui = {
-      currentGoal: document.getElementById("currentGoal"),
-      currentSubgoal: document.getElementById("currentSubgoal"),
-    };
+    // this.ui = {
+    //   currentGoal: document.getElementById("currentGoal"),
+    //   currentSubgoal: document.getElementById("currentSubgoal"),
+    // };
 
     // goal-driven agent design
 
@@ -59,7 +59,7 @@ class Girl extends Vehicle {
 
     this.brain.arbitrate();
 
-    this.mixer.update(delta);
+    // this.mixer.update(delta);
 
     return this;
   }

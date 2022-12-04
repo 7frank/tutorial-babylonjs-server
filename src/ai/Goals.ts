@@ -27,8 +27,8 @@ class RestGoal extends Goal {
   activate() {
     const owner = this.owner;
 
-    owner.ui.currentGoal.textContent = REST;
-    owner.ui.currentSubgoal.textContent = PLACEHOLDER;
+    // owner.ui.currentGoal.textContent = REST;
+    // owner.ui.currentSubgoal.textContent = PLACEHOLDER;
 
     //
 
@@ -66,7 +66,7 @@ class GatherGoal extends CompositeGoal {
 
     const owner = this.owner;
 
-    owner.ui.currentGoal.textContent = GATHER;
+    // owner.ui.currentGoal.textContent = GATHER;
 
     this.addSubgoal(new FindNextCollectibleGoal(owner));
     this.addSubgoal(new SeekToCollectibleGoal(owner));
@@ -97,7 +97,7 @@ class FindNextCollectibleGoal extends Goal {
 
     // update UI
 
-    owner.ui.currentSubgoal.textContent = FIND_NEXT;
+    // owner.ui.currentSubgoal.textContent = FIND_NEXT;
 
     // select closest collectible
 
@@ -167,7 +167,7 @@ class SeekToCollectibleGoal extends Goal {
 
     // update UI
 
-    owner.ui.currentSubgoal.textContent = SEEK;
+    // owner.ui.currentSubgoal.textContent = SEEK;
 
     //
 
@@ -230,7 +230,7 @@ class PickUpCollectibleGoal extends Goal {
   activate() {
     const owner = this.owner;
 
-    owner.ui.currentSubgoal.textContent = PICK_UP;
+    // owner.ui.currentSubgoal.textContent = PICK_UP;
 
     const gather = owner.animations.get(GATHER);
     gather.reset().fadeIn(owner.crossFadeDuration);
