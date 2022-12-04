@@ -6,11 +6,11 @@ import { GameEntity } from "yuka";
 
 class Collectible extends GameEntity {
   spawn() {
-    this.position.x = Math.random() * 15 - 7.5;
-    this.position.z = Math.random() * 15 - 7.5;
+    this.position.x = Math.random() * 150 - 75;
+    this.position.z = Math.random() * 150 - 75;
 
-    if (this.position.x < 1 && this.position.x > -1) this.position.x += 1;
-    if (this.position.z < 1 && this.position.y > -1) this.position.z += 1;
+    if (this.position.x < 10 && this.position.x > -10) this.position.x += 10;
+    if (this.position.z < 10 && this.position.y > -10) this.position.z += 10;
   }
 
   handleMessage(telegram) {

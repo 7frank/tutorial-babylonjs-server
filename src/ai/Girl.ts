@@ -10,7 +10,7 @@ class Girl extends Vehicle {
     super();
 
     this.maxTurnRate = Math.PI * 0.5;
-    this.maxSpeed = 1.5;
+    this.maxSpeed = 15;
 
     this.mixer = mixer;
     this.animations = animations;
@@ -59,7 +59,7 @@ class Girl extends Vehicle {
 
     this.brain.arbitrate();
 
-    // this.mixer.update(delta);
+    this.mixer.update(delta);
 
     return this;
   }

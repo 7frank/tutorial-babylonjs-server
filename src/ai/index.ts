@@ -22,6 +22,7 @@ animations.set("LEFT_TURN", createAnimationAction(mixer, "Character_LeftTurn"));
 function createAnimationAction(mixer: AnimationMixer, clip) {
   let action = mixer.clipAction(clip);
 
+  // TODO currently we provide a dummy animation
   if (!action) action = mixer.clipAction(new AnimationClip("IDLE", 1, []));
 
   action.play();
